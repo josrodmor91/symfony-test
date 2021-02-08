@@ -8,8 +8,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 final class CalculateScoreController
 {
+
+    public function __construct(){
+
+    }
+
     public function __invoke(): JsonResponse
     {
+
         return new JsonResponse([]);
     }
 }
