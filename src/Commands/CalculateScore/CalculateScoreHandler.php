@@ -6,6 +6,7 @@ namespace App\Commands\CalculateScore;
 
 use App\Domain\Ad;
 use App\Domain\Picture;
+use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
 
@@ -24,6 +25,7 @@ class CalculateScoreHandler
 
     /**
      * @param CalculateScoreCommand $calculateScoreCommand
+     * @throws NotFoundException
      */
     public function __invoke(CalculateScoreCommand $calculateScoreCommand){
         foreach ($this->adRepository->findAll() as $ad){

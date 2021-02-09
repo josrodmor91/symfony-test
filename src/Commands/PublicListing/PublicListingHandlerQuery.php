@@ -5,6 +5,7 @@ namespace App\Commands\PublicListing;
 
 
 use App\Infrastructure\Api\PublicAd;
+use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
 
@@ -24,6 +25,7 @@ class PublicListingHandlerQuery
     /**
      * @param PublicListingCommandQuery $commandQuery
      * @return array
+     * @throws NotFoundException
      */
     public function __invoke(PublicListingCommandQuery $commandQuery): array
     {

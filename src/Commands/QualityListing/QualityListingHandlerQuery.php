@@ -4,6 +4,7 @@
 namespace App\Commands\QualityListing;
 
 use App\Infrastructure\Api\QualityAd;
+use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
 
@@ -23,6 +24,7 @@ class QualityListingHandlerQuery
     /**
      * @param QualityListingCommandQuery $commandQuery
      * @return array
+     * @throws NotFoundException
      */
     public function __invoke(QualityListingCommandQuery $commandQuery): array
     {
