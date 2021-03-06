@@ -3,14 +3,12 @@
 
 namespace App\Commands\CalculateScore;
 
-
-use App\Domain\Ad;
-use App\Domain\Picture;
 use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class CalculateScoreHandler
+class CalculateScoreHandler implements MessageHandlerInterface
 {
     private AdRepositoryInterface $adRepository;
     private PictureRepositoryInterface $pictureRepository;

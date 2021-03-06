@@ -8,8 +8,9 @@ use App\Infrastructure\Api\PublicAd;
 use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class PublicListingHandlerQuery
+class PublicListingHandlerQuery implements MessageHandlerInterface
 {
     private AdRepositoryInterface $adRepository;
     private PictureRepositoryInterface $pictureRepository;

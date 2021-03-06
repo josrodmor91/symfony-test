@@ -7,8 +7,9 @@ use App\Infrastructure\Api\QualityAd;
 use App\Infrastructure\Exceptions\NotFoundException;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class QualityListingHandlerQuery
+class QualityListingHandlerQuery implements MessageHandlerInterface
 {
     private AdRepositoryInterface $adRepository;
     private PictureRepositoryInterface $pictureRepository;

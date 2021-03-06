@@ -41,5 +41,3 @@ A continuación se enumeran los requisitos mínimos para ejecutar el proyecto:
 ## Criterios de aceptación
 
 * El código debe ser ejecutable y no mostrar ninguna excepción.
-
-* Debes proporcionar 3 endpoints: Uno para calcular la puntuación de todos los anuncios, otro para listar los anuncios para un usuario de idealista y otro para listar los anuncios para el responsable del departamento de gestión de calidad.
