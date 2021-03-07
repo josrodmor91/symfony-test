@@ -4,10 +4,10 @@
 namespace App\ColvinBC\Domain;
 
 
-class FollowBacks
+final class FollowBacks
 {
-    private int $count;
-    private array $userNames;
+    public int $count;
+    public array $userNames;
 
     /**
      * FollowBacks constructor.

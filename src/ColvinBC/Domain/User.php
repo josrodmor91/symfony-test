@@ -4,10 +4,10 @@
 namespace App\ColvinBC\Domain;
 
 
-class User
+final class User
 {
-    private string $userName;
-    private FollowBacks $followBacks;
+    public string $userName;
+    public FollowBacks $followBacks;
 
     /**
      * User constructor.

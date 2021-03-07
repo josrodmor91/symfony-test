@@ -9,7 +9,7 @@ use App\ColvinBC\Exception\NotValidStatusReponseInRepositoryException;
 use App\ColvinBC\Infraestructure\GitHubRepositoryInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class RetrieveGitHubFollowersHandlerQuery  implements MessageHandlerInterface
+class RetrieveGitHubFollowersHandlerQuery implements MessageHandlerInterface
 {
     private GitHubRepositoryInterface|MockInterface $gitHubRepository;
 
