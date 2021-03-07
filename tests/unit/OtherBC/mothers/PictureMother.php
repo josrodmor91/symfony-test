@@ -3,7 +3,7 @@
 
 namespace App\Tests\unit\OtherBC\mothers;
 
-use App\Domain\Picture;
+use App\OtherBC\Domain\Picture;
 use Exception;
 
 class PictureMother

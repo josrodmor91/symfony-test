@@ -3,10 +3,10 @@
 
 namespace App\Tests\unit\OtherBC;
 
-use App\Commands\QualityListing\QualityListingCommandQuery;
-use App\Commands\QualityListing\QualityListingHandlerQuery;
-use App\Infrastructure\Persistence\AdRepositoryInterface;
-use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use App\OtherBC\Commands\QualityListing\QualityListingCommandQuery;
+use App\OtherBC\Commands\QualityListing\QualityListingHandlerQuery;
+use App\OtherBC\Infrastructure\Persistence\AdRepositoryInterface;
+use App\OtherBC\Infrastructure\Persistence\PictureRepositoryInterface;
 use App\Tests\unit\OtherBC\mothers\AdMother;
 use App\Tests\unit\OtherBC\mothers\PictureMother;
 use Exception;

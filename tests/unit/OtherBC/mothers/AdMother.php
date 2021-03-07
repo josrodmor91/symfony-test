@@ -3,7 +3,7 @@
 
 namespace App\Tests\unit\OtherBC\mothers;
 
-use App\Domain\Ad;
+use App\OtherBC\Domain\Ad;
 use Exception;
 
 class AdMother

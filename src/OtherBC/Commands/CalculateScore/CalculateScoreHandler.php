@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Commands\CalculateScore;
+namespace App\OtherBC\Commands\CalculateScore;
 
-use App\Infrastructure\Exceptions\NotFoundException;
-use App\Infrastructure\Persistence\AdRepositoryInterface;
-use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use App\OtherBC\Infrastructure\Exceptions\NotFoundException;
+use App\OtherBC\Infrastructure\Persistence\AdRepositoryInterface;
+use App\OtherBC\Infrastructure\Persistence\PictureRepositoryInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 class CalculateScoreHandler implements MessageHandlerInterface

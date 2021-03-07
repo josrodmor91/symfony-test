@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Infrastructure\Persistence;
+namespace App\OtherBC\Infrastructure\Persistence;
 
 
-use App\Domain\Ad;
+use App\OtherBC\Domain\Ad;
 
 interface AdRepositoryInterface
 {

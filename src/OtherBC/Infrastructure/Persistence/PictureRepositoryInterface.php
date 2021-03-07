@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Persistence;
+namespace App\OtherBC\Infrastructure\Persistence;
 
-use App\Domain\Picture;
-use App\Infrastructure\Exceptions\NotFoundException;
+use App\OtherBC\Domain\Picture;
+use App\OtherBC\Infrastructure\Exceptions\NotFoundException;
 
 interface PictureRepositoryInterface
 {

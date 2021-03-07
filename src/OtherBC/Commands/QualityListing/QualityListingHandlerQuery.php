@@ -1,16 +1,15 @@
 <?php
 
 
-namespace App\Commands\PublicListing;
+namespace App\OtherBC\Commands\QualityListing;
 
-
-use App\Infrastructure\Api\PublicAd;
-use App\Infrastructure\Exceptions\NotFoundException;
-use App\Infrastructure\Persistence\AdRepositoryInterface;
-use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use App\OtherBC\Infrastructure\Api\QualityAd;
+use App\OtherBC\Infrastructure\Exceptions\NotFoundException;
+use App\OtherBC\Infrastructure\Persistence\AdRepositoryInterface;
+use App\OtherBC\Infrastructure\Persistence\PictureRepositoryInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class PublicListingHandlerQuery implements MessageHandlerInterface
+class QualityListingHandlerQuery implements MessageHandlerInterface
 {
     private AdRepositoryInterface $adRepository;
     private PictureRepositoryInterface $pictureRepository;
@@ -18,32 +17,34 @@ class PublicListingHandlerQuery implements MessageHandlerInterface
     public function __construct(
         AdRepositoryInterface $adRepository,
         PictureRepositoryInterface $pictureRepository
-    ) {
+    ){
         $this->adRepository = $adRepository;
         $this->pictureRepository = $pictureRepository;
     }
 
     /**
-     * @param PublicListingCommandQuery $commandQuery
+     * @param QualityListingCommandQuery $commandQuery
      * @return array
      * @throws NotFoundException
      */
-    public function __invoke(PublicListingCommandQuery $commandQuery): array
+    public function __invoke(QualityListingCommandQuery $commandQuery): array
     {
         $result = [];
-        foreach ($this->adRepository->findRelevantsOrdered() as $ad) {
+        foreach ($this->adRepository->findIrrelevants() as $ad) {
             $pictureUrls = [];
             foreach ($ad->getPictures() as $pictureId) {
                 $pictureUrls[] = $this->pictureRepository->findByIdOrFail($pictureId)->getUrl();
             }
 
-            $result[] = new PublicAd(
+            $result[] = new QualityAd(
                 $ad->getId(),
                 $ad->getTypology(),
                 $ad->getDescription(),
                 $pictureUrls,
                 $ad->getHouseSize(),
-                $ad->getGardenSize()
+                $ad->getGardenSize(),
+                $ad->getScore(),
+                $ad->getIrrelevantSince()
             );
         }
         return $result;

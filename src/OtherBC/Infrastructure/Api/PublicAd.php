@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Api;
+namespace App\OtherBC\Infrastructure\Api;
 
 final class PublicAd
 {

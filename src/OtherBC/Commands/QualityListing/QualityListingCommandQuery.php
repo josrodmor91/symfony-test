@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Commands\QualityListing;
+namespace App\OtherBC\Commands\QualityListing;
 
 
 class QualityListingCommandQuery

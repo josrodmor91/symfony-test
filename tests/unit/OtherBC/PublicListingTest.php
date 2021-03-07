@@ -3,10 +3,10 @@
 
 namespace App\Tests\unit\OtherBC;
 
-use App\Commands\PublicListing\PublicListingCommandQuery;
-use App\Commands\PublicListing\PublicListingHandlerQuery;
-use App\Infrastructure\Persistence\AdRepositoryInterface;
-use App\Infrastructure\Persistence\PictureRepositoryInterface;
+use App\OtherBC\Commands\PublicListing\PublicListingCommandQuery;
+use App\OtherBC\Commands\PublicListing\PublicListingHandlerQuery;
+use App\OtherBC\Infrastructure\Persistence\AdRepositoryInterface;
+use App\OtherBC\Infrastructure\Persistence\PictureRepositoryInterface;
 use App\Tests\unit\OtherBC\mothers\AdMother;
 use App\Tests\unit\OtherBC\mothers\PictureMother;
 use Exception;

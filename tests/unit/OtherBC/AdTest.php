@@ -3,8 +3,8 @@
 
 namespace App\Tests\unit\OtherBC;
 
-use App\Domain\Ad;
-use App\Domain\Picture;
+use App\OtherBC\Domain\Ad;
+use App\OtherBC\Domain\Picture;
 use PHPUnit\Framework\TestCase;
 
 class AdTest extends TestCase
