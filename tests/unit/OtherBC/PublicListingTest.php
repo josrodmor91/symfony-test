@@ -1,14 +1,14 @@
 <?php
 
 
-namespace App\Tests\unit;
+namespace App\Tests\unit\OtherBC;
 
 use App\Commands\PublicListing\PublicListingCommandQuery;
 use App\Commands\PublicListing\PublicListingHandlerQuery;
 use App\Infrastructure\Persistence\AdRepositoryInterface;
 use App\Infrastructure\Persistence\PictureRepositoryInterface;
-use App\Tests\unit\mothers\AdMother;
-use App\Tests\unit\mothers\PictureMother;
+use App\Tests\unit\OtherBC\mothers\AdMother;
+use App\Tests\unit\OtherBC\mothers\PictureMother;
 use Exception;
 use PHPUnit\Framework\TestCase;
 

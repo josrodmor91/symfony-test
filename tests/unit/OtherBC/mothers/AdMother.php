@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Tests\unit\mothers;
+namespace App\Tests\unit\OtherBC\mothers;
 
 use App\Domain\Ad;
 use Exception;

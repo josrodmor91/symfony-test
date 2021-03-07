@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Tests\unit;
+namespace App\Tests\unit\OtherBC;
 
 use App\Domain\Ad;
 use App\Domain\Picture;
